@@ -6,7 +6,7 @@ import android.util.Log;
  * the implementation class which can be extended easily
  * only call android.util.Log
  */
-public class SimpleCustomLogger implements com.cursor.tools.mutils.log.Log {
+public class SimpleCustomLogger implements com.cursor.greendict.logger.Log {
     @Override
     public void d(String tag, String content) {
         Log.d(tag,content);   

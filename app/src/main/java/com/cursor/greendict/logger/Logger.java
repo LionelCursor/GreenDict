@@ -1,6 +1,7 @@
 package com.cursor.greendict.logger;
 
-import com.cursor.tools.mutils.BuildConfig;
+
+import com.cursor.greendict.BuildConfig;
 
 /**
  * Created by ldx on 2015/2/17.
@@ -43,7 +44,7 @@ public class Logger {
     /**
      * Custom Logger  
      */
-    private static Log customLogger = new SimpleCustomLogger();
+    private static Log customLogger = (Log) new SimpleCustomLogger();
 
     /**
      * set method of customLogger

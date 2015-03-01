@@ -1,16 +1,16 @@
 package com.cursor.greendict.ui;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import com.cursor.greendict.R;
+import com.cursor.greendict.logger.Logger;
 
 import butterknife.ButterKnife;
 
 /**
  * MainActivity
- * 
- * 
+ * * *
  * USER: ldx
  * EMAIL: danxionglei@foxmail.com
  * PROJECT_NAME: GreenDict
@@ -19,8 +19,8 @@ import butterknife.ButterKnife;
 public class MainActivity extends BaseActivity{
     
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
     }
