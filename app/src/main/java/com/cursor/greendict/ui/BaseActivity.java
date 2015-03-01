@@ -4,14 +4,6 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
-import android.view.View;
-import android.view.Window;
-
-import com.cursor.greendict.R;
-
-import net.simonvt.menudrawer.MenuDrawer;
-
 
 /**
  * BaseActivity
@@ -22,11 +14,9 @@ import net.simonvt.menudrawer.MenuDrawer;
  * DATE: 2015/3/1
  */
 public abstract class BaseActivity extends FragmentActivity {
-    protected ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-    
 }

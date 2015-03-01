@@ -3,4 +3,5 @@
     <dimen name="title_textView">25sp</dimen>
     <dimen name="word_textView">18sp</dimen>
     
+    <dimen name="menu_size">200dp</dimen>
 </resources>

@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/action_bar_background"
-    android:orientation="vertical" 
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageButton
@@ -22,13 +21,13 @@
         android:layout_centerInParent="true"
         android:theme="@style/TitleTextView"
         />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/title_btn_info_selector"
-        tools:ignore="RtlHardcoded"
-        android:contentDescription="@string/btn_info" />
-    
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:src="@drawable/title_btn_info_selector"-->
+        <!--tools:ignore="RtlHardcoded"-->
+        <!--android:contentDescription="@string/btn_info" />-->
+    <!---->
 </RelativeLayout>
