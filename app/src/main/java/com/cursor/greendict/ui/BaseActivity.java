@@ -27,20 +27,6 @@ public abstract class BaseActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initDrawer();
-        initActionBar();
     }
     
-    private void initActionBar(){
-        actionBar = getActionBar();
-        actionBar.setDisplayShowHomeEnabled(false);
-        actionBar.setDisplayUseLogoEnabled(false);
-        actionBar.setDisplayShowCustomEnabled(false);
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setCustomView(R.layout.actionbar_title);
-    }
-    
-    private void initDrawer(){
-        MenuDrawer.attach(this);
-    }
 }

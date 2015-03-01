@@ -7,6 +7,7 @@ import com.cursor.greendict.R;
 import com.cursor.greendict.logger.Logger;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * MainActivity
@@ -22,6 +23,20 @@ public class MainActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+        initActionBar();
+    }
+    
+    private void initActionBar(){
+        actionBar = getActionBar();
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayUseLogoEnabled(false);
+        actionBar.setDisplayShowCustomEnabled(false);
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setCustomView(R.layout.actionbar_title);
+        ButterKnife.inject(actionBar.getCustomView(),this);
+    }
+    
+    @OnClick(R.id.action_bar_left_button) void operateDrawer(){
+        
     }
 }
