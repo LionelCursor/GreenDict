@@ -1,1 +1,1 @@
-include ':app', ':mutils'
+include ':app'

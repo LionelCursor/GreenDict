@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_textView">#fff</color>
+    <color name="word_textView">#000</color>
+    <color name="hint_textView">#eeb2b2b2</color>
+    <color name="activity_background">#ff161616</color>
+</resources>

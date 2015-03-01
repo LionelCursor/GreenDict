@@ -2,7 +2,20 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
     </style>
 
+    <style name="BaseTextView">
+    </style>
+    
+    <style name="TitleTextView" parent="BaseTextView">
+        <item name="android:textColor">@color/title_textView</item>
+        <item name="android:textSize">@dimen/title_textView</item>
+    </style>
+    <style name="WordTextView" parent="BaseTextView">
+        <item name="android:textColor">@color/word_textView</item>
+        <item name="android:textSize">@dimen/word_textView</item>
+    </style>
+    <style name="HintTextView" parent="WordTextView">
+        <item name="android:textColor">@color/hint_textView</item>
+    </style>
 </resources>

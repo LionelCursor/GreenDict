@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GreenDict</string>
+    <string name="btn_list">ListButton</string>
+    <string name="btn_info">InfoButton</string>
 </resources>
