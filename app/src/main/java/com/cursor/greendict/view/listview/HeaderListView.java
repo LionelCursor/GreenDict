@@ -23,7 +23,4 @@ public class HeaderListView extends ListView{
         super(context, attrs, defStyleAttr);
     }
 
-    public HeaderListView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
 }
