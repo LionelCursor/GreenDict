@@ -1,4 +1,4 @@
-package com.cursor.greendict.logger;
+package com.cursor.greendict.utils.logger;
 
 
 import com.cursor.greendict.BuildConfig;

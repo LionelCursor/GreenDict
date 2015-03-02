@@ -2,7 +2,7 @@ package com.cursor.greendict;
 
 import android.app.Application;
 
-import com.cursor.greendict.logger.Logger;
+import com.cursor.greendict.utils.logger.Logger;
 
 /**
  * Instance of application
@@ -18,5 +18,6 @@ public class App extends Application {
         super.onCreate();
         Logger.prefix = "greenDict";
         Logger.d("");
+        
     }
 }

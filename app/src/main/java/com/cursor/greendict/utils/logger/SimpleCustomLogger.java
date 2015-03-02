@@ -1,4 +1,4 @@
-package com.cursor.greendict.logger;
+package com.cursor.greendict.utils.logger;
 
 import android.util.Log;
 /**
@@ -6,7 +6,7 @@ import android.util.Log;
  * the implementation class which can be extended easily
  * only call android.util.Log
  */
-public class SimpleCustomLogger implements com.cursor.greendict.logger.Log {
+public class SimpleCustomLogger implements com.cursor.greendict.utils.logger.Log {
     @Override
     public void d(String tag, String content) {
         Log.d(tag,content);   

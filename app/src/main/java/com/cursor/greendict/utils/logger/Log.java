@@ -1,4 +1,4 @@
-package com.cursor.greendict.logger;
+package com.cursor.greendict.utils.logger;
 
 /**
  * Created by ldx on 2015/2/17.

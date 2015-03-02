@@ -2,14 +2,13 @@ package com.cursor.greendict.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.cursor.greendict.R;
-import com.cursor.greendict.logger.Logger;
+import com.cursor.greendict.utils.logger.Logger;
 import com.cursor.greendict.ui.adapter.DrawerAdapter;
 
 import butterknife.ButterKnife;

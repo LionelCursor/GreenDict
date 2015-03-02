@@ -1,12 +1,9 @@
 package com.cursor.greendict.ui;
 
 import android.app.ActionBar;
-import android.app.Activity;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.cursor.greendict.R;
-import com.cursor.greendict.logger.Logger;
 import com.cursor.greendict.view.textview.TitleTextView;
 
 import net.simonvt.menudrawer.MenuDrawer;
@@ -40,6 +37,7 @@ public class MainActivity extends BaseActivity{
     
     private void initActionBar(){
         ActionBar actionBar = getActionBar();
+        if (actionBar == null) return;
         actionBar.setDisplayUseLogoEnabled(false);
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayShowHomeEnabled(false);
