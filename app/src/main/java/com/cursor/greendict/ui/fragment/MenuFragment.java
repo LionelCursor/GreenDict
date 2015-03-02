@@ -6,8 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.cursor.greendict.R;
+import com.cursor.greendict.logger.Logger;
+import com.cursor.greendict.ui.adapter.DrawerAdapter;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
+import butterknife.OnItemClick;
 
 /**
  * MenuDrawer
@@ -17,10 +25,28 @@ import com.cursor.greendict.R;
  * PROJECT_NAME: GreenDict
  * DATE: 2015/3/1
  */
-public class MenuFragment extends Fragment {
+public class MenuFragment extends BaseFragment {
+    @OnClick(R.id.btn_edit_fragment_menu) void btnEditOnClick(){
+        Logger.d("");
+    }
+    
+    @InjectView(R.id.menu_list_view)
+    ListView mListView;
+    
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.fragment_menu,null);
+        View view = inflater.inflate(R.layout.fragment_menu,null);
+        ButterKnife.inject(view);
+        DrawerAdapter adapter = new DrawerAdapter(mListView);
+        mListView.setAdapter(adapter);
+        mListView.setItemChecked(0,true);
+        return view;
     }
+    
+    @OnItemClick(R.id.menu_list_view) void onItemClick(int position){
+        mListView.setItemChecked(position,true);
+    }
+    
+    
 }

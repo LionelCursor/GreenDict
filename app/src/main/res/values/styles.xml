@@ -18,4 +18,12 @@
     <style name="HintTextView" parent="WordTextView">
         <item name="android:textColor">@color/hint_textView</item>
     </style>
+    
+    <style name="BaseMenuTextView" parent="BaseTextView">
+    </style>
+    
+    <style name="menu_edit" parent="BaseMenuTextView">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/menu_edit_textVew</item>
+    </style>
 </resources>

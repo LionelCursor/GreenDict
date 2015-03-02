@@ -3,14 +3,17 @@ package com.cursor.greendict.ui;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.cursor.greendict.R;
 import com.cursor.greendict.logger.Logger;
+import com.cursor.greendict.view.textview.TitleTextView;
 
 import net.simonvt.menudrawer.MenuDrawer;
 import net.simonvt.menudrawer.Position;
 
 import butterknife.ButterKnife;
+import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -23,11 +26,16 @@ import butterknife.OnClick;
  */
 public class MainActivity extends BaseActivity{
     private MenuDrawer mMenuDrawer;
+    @InjectView(R.id.action_bar_title)
+    TitleTextView mTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         initActionBar();
         initMenuDrawer();
+        ButterKnife.inject(this);
+        mTitle.setText(getResources().getString(R.string.action_bar_title));
     }
     
     private void initActionBar(){
@@ -38,17 +46,18 @@ public class MainActivity extends BaseActivity{
         actionBar.setDisplayUseLogoEnabled(false);
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setCustomView(R.layout.actionbar_title);
-        ButterKnife.inject(actionBar.getCustomView(),this);
     }
     
     private void initMenuDrawer(){
-        mMenuDrawer = MenuDrawer.attach(this, Position.LEFT);
+        mMenuDrawer = MenuDrawer.attach(this,MenuDrawer.Type.BEHIND, Position.START, MenuDrawer.MENU_DRAG_WINDOW);
         mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_NONE);
         mMenuDrawer.setContentView(R.layout.activity_main);
         mMenuDrawer.setMenuView(R.layout.activity_menu);
-        mMenuDrawer.setDropShadowColor(getResources().getColor(android.R.color.transparent));
+        mMenuDrawer.setDropShadowEnabled(false);
+        mMenuDrawer.setAnimationCacheEnabled(true);
+        mMenuDrawer.setDrawOverlay(false);
         mMenuDrawer.setMaxAnimationDuration(1000);
-        mMenuDrawer.setHardwareLayerEnabled(false);
+        mMenuDrawer.setHardwareLayerEnabled(true);
         mMenuDrawer.setMenuSize((int)getResources().getDimension(R.dimen.menu_size));
     }
     

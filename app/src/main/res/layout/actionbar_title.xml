@@ -16,6 +16,7 @@
         tools:ignore="RtlHardcoded"
         android:contentDescription="@string/btn_list" />
     <com.cursor.greendict.view.textview.TitleTextView
+        android:id="@+id/action_bar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
