@@ -1,6 +1,5 @@
 package com.cursor.greendict;
 
-import com.cursor.greendict.model.Entity;
 
 import java.util.List;
 
@@ -10,7 +9,7 @@ import de.greenrobot.dao.DaoException;
 /**
  * Entity mapped to table DICT.
  */
-public class dict extends Entity {
+public class dict {
 
     private Long id;
     private String dict_name;

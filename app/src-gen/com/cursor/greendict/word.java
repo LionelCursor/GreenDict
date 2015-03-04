@@ -1,6 +1,5 @@
 package com.cursor.greendict;
 
-import com.cursor.greendict.model.Entity;
 
 import de.greenrobot.dao.DaoException;
 
@@ -8,7 +7,7 @@ import de.greenrobot.dao.DaoException;
 /**
  * Entity mapped to table WORD.
  */
-public class word extends Entity{
+public class word {
 
     private Long id;
     /** Not-null value. */
@@ -118,7 +117,7 @@ public class word extends Entity{
         }
     }
 
-    /** Convenient call for {@link AbstractDao#delete(Object)}. Entity must attached to an entity context. */
+    /** Convenient call for {@link de.greenrobot.dao.AbstractDao#delete(Object)}. Entity must attached to an entity context. */
     public void delete() {
         if (myDao == null) {
             throw new DaoException("Entity is detached from DAO context");
@@ -126,7 +125,7 @@ public class word extends Entity{
         myDao.delete(this);
     }
 
-    /** Convenient call for {@link AbstractDao#update(Object)}. Entity must attached to an entity context. */
+    /** Convenient call for {@link de.greenrobot.dao.AbstractDao#update(Object)}. Entity must attached to an entity context. */
     public void update() {
         if (myDao == null) {
             throw new DaoException("Entity is detached from DAO context");
@@ -134,7 +133,7 @@ public class word extends Entity{
         myDao.update(this);
     }
 
-    /** Convenient call for {@link AbstractDao#refresh(Object)}. Entity must attached to an entity context. */
+    /** Convenient call for {@link de.greenrobot.dao.AbstractDao#refresh(Object)}. Entity must attached to an entity context. */
     public void refresh() {
         if (myDao == null) {
             throw new DaoException("Entity is detached from DAO context");
