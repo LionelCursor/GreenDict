@@ -33,13 +33,22 @@ public class DictDBHelper extends BaseDBHelper {
 
     
     public long saveEntity(dict entity) {
-        dictDao.insertOrReplace(entity);
-        return 0;
+        return dictDao.insertOrReplace(entity);
     }
 
     
-    public void saveEntityList(List<Entity> list) {
-
+    public void saveEntityList(final List<dict> list) {
+        if (list == null||list.isEmpty()){
+            return;            
+        }
+        dictDao.getSession().runInTx(new Runnable() {
+            @Override
+            public void run() {
+                for(int i = 0;i<list.size(); i++){ 
+                    dictDao.insertOrReplace(list.get(i));
+                }
+            }
+        });
     }
 
     
@@ -54,16 +63,16 @@ public class DictDBHelper extends BaseDBHelper {
 
     
     public void deleteAllEntity() {
-
+        dictDao.deleteAll();
     }
 
     
-    public void deleteEntity(Entity entity) {
-
+    public void deleteEntity(dict entity) {
+        dictDao.delete(entity);
     }
 
     
     public void deleteEntity(long id) {
-
+        dictDao.deleteByKey(id);
     }
 }

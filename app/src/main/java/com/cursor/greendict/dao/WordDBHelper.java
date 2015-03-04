@@ -3,6 +3,8 @@ package com.cursor.greendict.dao;
 import android.content.Context;
 
 import com.cursor.greendict.model.Entity;
+import com.cursor.greendict.word;
+import com.cursor.greendict.wordDao;
 
 import java.util.List;
 
@@ -14,48 +16,66 @@ import java.util.List;
  */
 public class WordDBHelper extends BaseDBHelper{
 
-
     private static WordDBHelper instance;
-
+    
+    private wordDao wordDao;
+    
+    private WordDBHelper(){}
+    
     public BaseDBHelper getInstance(Context context) {
         if (instance == null){
-
+            instance = new WordDBHelper();
+            if (instance.appContext==null){
+                instance.appContext = context.getApplicationContext();
+            }
+            daoSession = getDaoSession(appContext);
+            instance.wordDao = daoSession.getWordDao();
         }
-        return null;
+        return instance;
     }
 
     
-    public long saveEntity(Entity entity) {
-        return 0;
+    public long saveEntity(word entity) {
+        return wordDao.insertOrReplace(entity);
     }
 
     
-    public void saveEntityList(List<Entity> list) {
+    public void saveEntityList(final List<word> list) {
+        if (list==null||list.isEmpty()){
+            return;
+        }
+        wordDao.getSession().runInTx(new Runnable() {
+            @Override
+            public void run() {
+                for (int i=0;i<list.size();i++){
+                    wordDao.insertOrReplaceInTx(list.get(i));
+                }
+            }
+        });
+   }
 
+    
+    public word getEntity(long id) {
+        return wordDao.load(id);
     }
 
     
-    public Entity getEntity(long id) {
-        return null;
-    }
-
-    
-    public List<com.cursor.greendict.dict> getAllEntity() {
-        return null;
+    public List<word> getAllEntity() {
+        return wordDao.loadAll();
     }
 
     
     public void deleteAllEntity() {
-
+        wordDao.deleteAll();
     }
 
     
-    public void deleteEntity(Entity entity) {
-
+    public void deleteEntity(word entity) {
+        wordDao.delete(entity);
     }
 
     
     public void deleteEntity(long id) {
-
+        wordDao.deleteByKey(id);
     }
 }
