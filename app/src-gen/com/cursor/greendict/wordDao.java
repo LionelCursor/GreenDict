@@ -162,7 +162,7 @@ public class wordDao extends AbstractDao<word, Long> {
             StringBuilder builder = new StringBuilder("SELECT ");
             SqlUtils.appendColumns(builder, "T", getAllColumns());
             builder.append(',');
-            SqlUtils.appendColumns(builder, "T0", daoSession.getdictDao().getAllColumns());
+            SqlUtils.appendColumns(builder, "T0", daoSession.getDictDao().getAllColumns());
             builder.append(" FROM WORD T");
             builder.append(" LEFT JOIN DICT T0 ON T.'DICT_ID'=T0.'_id'");
             builder.append(' ');
@@ -175,7 +175,7 @@ public class wordDao extends AbstractDao<word, Long> {
         word entity = loadCurrent(cursor, 0, lock);
         int offset = getAllColumns().length;
 
-        dict dict = loadCurrentOther(daoSession.getdictDao(), cursor, offset);
+        dict dict = loadCurrentOther(daoSession.getDictDao(), cursor, offset);
          if(dict != null) {
             entity.setDict(dict);
         }

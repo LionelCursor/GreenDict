@@ -20,12 +20,20 @@ public abstract class BaseDBHelper {
     protected Context appContext;
 
     /**
+     * preInitHelper, open the Session of database
+     * @param context context
+     */
+    public static void preInitHelper(Context context){
+        getDaoSession(context);
+    }
+
+    /**
      * 取得DaoMaster
      *
      * @param context context
      * @return master
      */
-    public static DaoMaster getDaoMaster(Context context) {
+    protected static DaoMaster getDaoMaster(Context context) {
         if (daoMaster == null) {
             DaoMaster.OpenHelper helper = new DaoMaster.DevOpenHelper(context, Constants.DB_NAME, null);
             daoMaster = new DaoMaster(helper.getWritableDatabase());
@@ -39,7 +47,7 @@ public abstract class BaseDBHelper {
      * @param context context
      * @return session
      */
-    public static DaoSession getDaoSession(Context context) {
+    protected static DaoSession getDaoSession(Context context) {
         if (daoSession == null) {
             if (daoMaster == null) {
                 daoMaster = getDaoMaster(context);
@@ -48,4 +56,5 @@ public abstract class BaseDBHelper {
         }
         return daoSession;
     }
+    
 }

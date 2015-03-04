@@ -8,4 +8,5 @@ package com.cursor.greendict.utils;
  */
 public class Constants {
     public static final String DB_NAME = "greenDB";
+    public static final String initDict = "greenDict";
 }

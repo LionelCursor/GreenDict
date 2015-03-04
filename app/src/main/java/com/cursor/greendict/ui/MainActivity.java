@@ -50,6 +50,7 @@ public class MainActivity extends BaseActivity{
         mMenuDrawer = MenuDrawer.attach(this,MenuDrawer.Type.BEHIND, Position.START, MenuDrawer.MENU_DRAG_WINDOW);
         mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_NONE);
         mMenuDrawer.setContentView(R.layout.activity_main);
+        
         mMenuDrawer.setMenuView(R.layout.activity_menu);
         mMenuDrawer.setDropShadowEnabled(false);
         mMenuDrawer.setAnimationCacheEnabled(true);

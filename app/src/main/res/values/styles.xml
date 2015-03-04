@@ -26,4 +26,8 @@
         <item name="android:textColor">@color/gray</item>
         <item name="android:textSize">@dimen/menu_edit_textVew</item>
     </style>
+    <style name="menu_list_item_text" parent="BaseMenuTextView">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/menu_list_item_text_size</item>
+    </style>
 </resources>

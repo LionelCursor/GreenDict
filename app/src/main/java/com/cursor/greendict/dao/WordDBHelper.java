@@ -21,7 +21,7 @@ public class WordDBHelper extends BaseDBHelper{
     
     private WordDBHelper(){}
     
-    public BaseDBHelper getInstance(Context context) {
+    public WordDBHelper getInstance(Context context) {
         if (instance == null){
             instance = new WordDBHelper();
             if (instance.appContext==null){
@@ -32,8 +32,12 @@ public class WordDBHelper extends BaseDBHelper{
         }
         return instance;
     }
-
     
+    public long getCount(){
+        return wordDao.count();
+    }
+
+
     public long saveEntity(word entity) {
         return wordDao.insertOrReplace(entity);
     }

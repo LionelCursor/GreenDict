@@ -18,7 +18,7 @@ public class DictDBHelper extends BaseDBHelper {
     private dictDao dictDao;
     private DictDBHelper(){}
     
-    public static BaseDBHelper getInstance(Context context) {
+    public static DictDBHelper getInstance(Context context) {
         if (instance == null){
             instance = new DictDBHelper();
             if (instance.appContext == null){
@@ -29,7 +29,14 @@ public class DictDBHelper extends BaseDBHelper {
         }
         return instance;
     }
-
+    
+    public long getCount(){
+        return dictDao.count();
+    }
+    
+    public long getId(dict entity){
+        return dictDao.getKey(entity);
+    }
     
     public long saveEntity(dict entity) {
         return dictDao.insertOrReplace(entity);

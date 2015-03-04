@@ -35,9 +35,9 @@ public class MenuFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_menu,null);
-        ButterKnife.inject(view);
-        DrawerAdapter adapter = new DrawerAdapter(mListView);
+        View view = inflater.inflate(R.layout.fragment_menu,container);
+        ButterKnife.inject(this,view);
+        DrawerAdapter adapter = new DrawerAdapter(mListView,this.getActivity());
         mListView.setAdapter(adapter);
         mListView.setItemChecked(0,true);
         return view;
