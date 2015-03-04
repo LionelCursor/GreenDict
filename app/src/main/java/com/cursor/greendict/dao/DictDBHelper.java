@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.cursor.greendict.dict;
 import com.cursor.greendict.dictDao;
-import com.cursor.greendict.model.Entity;
 
 import java.util.List;
 

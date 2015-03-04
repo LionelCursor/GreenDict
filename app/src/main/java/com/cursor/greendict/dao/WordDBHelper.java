@@ -2,7 +2,6 @@ package com.cursor.greendict.dao;
 
 import android.content.Context;
 
-import com.cursor.greendict.model.Entity;
 import com.cursor.greendict.word;
 import com.cursor.greendict.wordDao;
 
