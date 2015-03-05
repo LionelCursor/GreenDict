@@ -23,11 +23,19 @@
     </style>
     
     <style name="menu_edit" parent="BaseMenuTextView">
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:textColor">@color/theme_color_edit_button_list</item>
         <item name="android:textSize">@dimen/menu_edit_textVew</item>
     </style>
     <style name="menu_list_item_text" parent="BaseMenuTextView">
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:textColor">@color/theme_color_white</item>
         <item name="android:textSize">@dimen/menu_list_item_text_size</item>
+    </style>
+    
+    
+    <style name="BaseListView"/>
+    
+    <style name="DrawerListView" parent="BaseMenuTextView">
+        <item name="android:divider">@color/theme_color_text_list</item>
+        <item name="android:dividerHeight">@dimen/menu_list_item_divider_height</item>
     </style>
 </resources>

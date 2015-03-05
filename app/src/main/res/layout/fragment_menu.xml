@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/theme_color_background_deep"
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="@dimen/abc_action_bar_default_height_material">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" 
-            android:text="@string/app_name"
-            android:textColor="@color/gray"/>
+            android:text="@string/Username"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="12sp"
+            android:textColor="@color/theme_color_text_list"/>
         <Button
             android:id="@+id/btn_edit_fragment_menu"
-            android:layout_width="24dp"
-            android:layout_height="10dp"
-            android:background="@null"
-            android:text="@string/app_name"
-            android:src="@drawable/menu_edit_selector"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:padding="0dp"
+            android:layout_marginRight="20dp"
+            android:theme="@style/menu_edit"
+            android:text="@string/menu_edit"
+            android:background="@drawable/menu_edit_selector"/>
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_list_item_divider_height" 
+            android:layout_alignParentBottom="true" 
+            android:background="@color/theme_color_text_list"/>
         </RelativeLayout>
     <ListView
         android:id="@+id/menu_list_view"
+        android:theme="@style/DrawerListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

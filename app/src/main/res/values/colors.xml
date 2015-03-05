@@ -3,9 +3,16 @@
     <color name="title_textView">#fff</color>
     <color name="word_textView">#000</color>
     <color name="hint_textView">#eeb2b2b2</color>
-    <color name="activity_background">#ff232323</color>
     <color name="main_green">#28b446</color>
     <color name="press_green">#12741a</color>
-    <color name="gray">#7f7f7f</color>
     <color name="action_bar_background">@color/main_green</color>
+    
+    <color name="theme_color_background_deep">#ff282828</color>
+    <color name="theme_color_background_light">#ff2D2D2D</color>
+    <color name="theme_color_background_list_selected">#ff323232</color>
+    <color name="theme_color_text_list">#ff505050</color>
+    <color name="theme_color_edit_button_list">#ffAAAAAA</color>
+    <color name="theme_color_2">#ff595959</color>
+    <color name="theme_color_3">#ff808080</color>
+    <color name="theme_color_white">#ffffffff</color>
 </resources>

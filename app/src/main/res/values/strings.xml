@@ -4,4 +4,6 @@
     <string name="btn_info">InfoButton</string>
     <string name="action_bar_title">@string/app_name</string>
     <string name="menu_edit">编辑</string>
+    
+    <string name="Username">username</string>
 </resources>
