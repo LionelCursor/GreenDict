@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.os.Bundle;
 
 import com.cursor.greendict.R;
+import com.cursor.greendict.view.listview.HeaderListView;
 import com.cursor.greendict.view.textview.TitleTextView;
 
 import net.simonvt.menudrawer.MenuDrawer;
@@ -25,6 +26,10 @@ public class MainActivity extends BaseActivity{
     private MenuDrawer mMenuDrawer;
     @InjectView(R.id.action_bar_title)
     TitleTextView mTitle;
+
+    @InjectView(R.id.activity_main_listView)
+    HeaderListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,8 @@ public class MainActivity extends BaseActivity{
         initMenuDrawer();
         ButterKnife.inject(this);
         mTitle.setText(getResources().getString(R.string.action_bar_title));
+
+
     }
     
     private void initActionBar(){

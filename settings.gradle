@@ -1,1 +1,1 @@
-include ':app', ':menudrawer', ':generator'
+include ':app', ':menudrawer', ':generator', ':headerlistview'
