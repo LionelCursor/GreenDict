@@ -37,6 +37,7 @@ public class HeaderListView extends ListView implements AbsListView.OnScrollList
 
     private void init(){
         density = mContext.getResources().getDisplayMetrics().density;
+        setOverScrollMode(OVER_SCROLL_ALWAYS);
     }
 
 
@@ -47,7 +48,7 @@ public class HeaderListView extends ListView implements AbsListView.OnScrollList
 
     @Override
     protected boolean overScrollBy(int deltaX, int deltaY, int scrollX, int scrollY, int scrollRangeX, int scrollRangeY, int maxOverScrollX, int maxOverScrollY, boolean isTouchEvent) {
-        return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX, scrollRangeY, maxOverScrollX, mMaxOverScrollY, isTouchEvent);
+        return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX, scrollRangeY, maxOverScrollX, (int)(mMaxOverScrollY*density), isTouchEvent);
     }
 
     @Override

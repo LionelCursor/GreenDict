@@ -32,9 +32,9 @@
             android:layout_alignParentBottom="true" 
             android:background="@color/theme_color_text_list"/>
         </RelativeLayout>
-    <ListView
+    <com.cursor.headerlistview.HeaderListView
         android:id="@+id/menu_list_view"
         android:theme="@style/DrawerListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"/>
 </LinearLayout>

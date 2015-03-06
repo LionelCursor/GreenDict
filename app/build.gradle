@@ -31,4 +31,5 @@ dependencies {
     }
     compile project(':menudrawer')
     compile 'de.greenrobot:greendao:1.3.1'
+    compile project(':headerlistview')
 }
